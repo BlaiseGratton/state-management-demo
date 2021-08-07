@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  </head>
+  <body>
+    <p id="counter-value">1</p>
+    <button id="increment">Increment</button>
+    <button id="decrement">Decrement</button>
+    <script>
+      const counterState = { value: 1 }
+      const increment = () => counterState.value += 1
+      const decrement = () => counterState.value -= 1
+
+      const counterDisplay = document.querySelector('#counter-value')
+      const setCounterDisplay = (newValue) => counterDisplay.textContent = newValue
+    </script>
+  </body>
+</html>

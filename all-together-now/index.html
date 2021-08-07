@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  </head>
+  <body>
+    <p id="counter-value">1</p>
+    <button id="increment">Increment</button>
+    <button id="decrement">Decrement</button>
+    <script>
+      const counterState = { value: 1 }
+
+      const increment = () => {
+        counterState.value += 1
+        setCounterDisplay(counterState.value)
+      }
+
+      const decrement = () => {
+        counterState.value -= 1
+        setCounterDisplay(counterState.value)
+      }
+
+      const counterDisplay = document.querySelector('#counter-value')
+      const setCounterDisplay = (newValue) => counterDisplay.textContent = newValue
+
+      const incrementer = document.querySelector('#increment')
+      const decrementer = document.querySelector('#decrement')
+
+      incrementer.addEventListener('click', increment)
+      decrementer.addEventListener('click', decrement)
+    </script>
+  </body>
+</html>
